@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run the tests
         run: python3 test.py
+      - name: Build the executable
         run: pyinstaller --windowid --onefile gui.py
       - name: Upload gui-linux
         uses: actions/upload-artifact@v2
